@@ -33,7 +33,9 @@ app.use("/counselling", counsellingRoutes);
 app.use("/api/counselling", counsellingRoutes);
 app.use("/admin", adminRoutes);
 app.use("/api/admin", adminRoutes);
-
+app.get("/",(req,res)=>{
+  res.json({Status:"Everything is fine"})
+})
 // Centralized error handling middleware
 app.use((err, req, res, next) => {
   console.error("Error:", err.message);
